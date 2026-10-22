@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jackvin Paul J A | Portfolio</title>
+  <meta name="description" content="Portfolio of Jackvin Paul J A - 2nd Year Student at KGCAS, Coimbatore, India. HTML, CSS, JavaScript Developer.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body data-theme="sunset">
+
+  <!-- Floating Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-text">Jackvin Paul J A</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Palette Switcher Menu Button -->
+        <div class="palette-picker-wrapper">
+          <button id="themeToggleBtn" class="btn-icon" aria-label="Change Color Theme" title="Theme Palette">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+          </button>
+          <div class="palette-dropdown" id="paletteDropdown">
+            <div class="palette-header">Select Mood</div>
+            <button class="palette-opt active" data-set-theme="sunset">
+              <span class="swatch sunset"></span> Sunset Coral
+            </button>
+            <button class="palette-opt" data-set-theme="indigo">
+              <span class="swatch indigo"></span> Electric Indigo
+            </button>
+            <button class="palette-opt" data-set-theme="sage">
+              <span class="swatch sage"></span> Nordic Sage
+            </button>
+            <button class="palette-opt" data-set-theme="midnight">
+              <span class="swatch midnight"></span> Midnight Dark
+            </button>
+          </div>
+        </div>
+
+        <!-- Primary CTA: Gmail Toggle Button -->
+        <button id="navGmailToggleBtn" class="btn btn-primary btn-sm gmail-toggle-btn" title="Toggle Gmail Quick Connect">
+          <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span>Gmail</span>
+          <span class="pulse-indicator"></span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <div class="mobile-footer-actions">
+        <button class="btn btn-primary btn-block gmail-toggle-btn">
+          Open Gmail Quick Connect
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION (HOME) ==================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        
+        <!-- Hero Content (Left) -->
+        <div class="hero-content">
+          <!-- Student Status Badge -->
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">KGCAS Student · Second Year · Coimbatore, India</span>
+          </div>
+
+          <!-- Hero Headline with Hand-drawn Doodle Accent -->
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight-name">Jackvin.</span>
+            <svg class="doodle-underline" viewBox="0 0 260 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 17C45 5 130 3 257 15" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M18 19C75 11 165 9 242 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+          </h1>
+
+          <p class="hero-subtitle">
+            I build responsive, clean web experiences and functional digital tools. Passionate about modern UI craft, clean code, and intuitive user experiences.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View my work</span>
+              <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            
+            <button class="btn btn-secondary gmail-toggle-btn">
+              <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <span>Toggle Gmail</span>
+            </button>
+          </div>
+
+          <!-- Highlighted Project Callout Card -->
+          <div class="highlighted-project-banner">
+            <div class="highlight-badge">
+              <svg class="star-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span>HIGHLIGHTED PROJECT</span>
+            </div>
+            <div class="highlight-content">
+              <h4>Interactive Text Converter & Resume Builder</h4>
+              <p>Clean browser tools built with vanilla JS for instant text manipulations and dynamic CV drafting.</p>
+            </div>
+            <a href="#projects" class="highlight-link" title="Scroll to project details">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Photo & Organic Backdrop (Right) -->
+        <div class="hero-visual">
+          <div class="blob-wrapper">
+            <!-- Organic Pastel Background Blob -->
+            <div class="organic-blob"></div>
+
+            <!-- Hand-drawn Doodle Rays / Accents (like reference) -->
+            <svg class="doodle-rays top-right-rays" viewBox="0 0 60 60" fill="none">
+              <path d="M12 40L2 48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M28 28L25 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M42 36L56 28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+
+            <!-- Decorative Star/Sparkle Accent -->
+            <div class="doodle-sparkle">✦</div>
+
+            <!-- Jackvin's Portrait Image -->
+            <div class="portrait-container">
+              <img src="assets/jackvin.jpg" alt="Jackvin Paul J A - Profile Portrait" class="portrait-img" loading="eager">
+            </div>
+
+            <!-- Floating Pill Badges -->
+            <div class="floating-badge badge-top">
+              <span class="floating-icon">🎓</span>
+              <div class="floating-text">
+                <strong>KGCAS</strong>
+                <small>2nd Year Student</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom">
+              <span class="floating-icon">📍</span>
+              <div class="floating-text">
+                <strong>Coimbatore</strong>
+                <small>Tamil Nadu, India</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Featured Work</span>
+          </div>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-subtitle">
+            Functional, responsive web projects crafted with modern HTML, CSS, and pure JavaScript.
+          </p>
+        </div>
+
+        <!-- 3 Project Cards Grid (Exact aesthetic as reference, unique aspect & colors) -->
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: Portfolio -->
+          <article class="project-card card-portfolio">
+            <div class="card-screen-wrap">
+              <!-- Laptop Mockup Display -->
+              <div class="laptop-mockup">
+                <div class="laptop-camera"></div>
+                <div class="laptop-screen">
+                  <div class="screen-preview screen-portfolio">
+                    <!-- Mini simulated UI -->
+                    <div class="mini-header">
+                      <div class="mini-dots"><span></span><span></span><span></span></div>
+                      <div class="mini-title">jackvin.dev</div>
+                    </div>
+                    <div class="mini-body mini-portfolio-body">
+                      <div class="mini-left">
+                        <div class="mini-pill"></div>
+                        <div class="mini-h1"></div>
+                        <div class="mini-h1 short"></div>
+                        <div class="mini-p"></div>
+                        <div class="mini-btn"></div>
+                      </div>
+                      <div class="mini-right">
+                        <div class="mini-avatar-blob">
+                          <img src="assets/jackvin.jpg" alt="Mini avatar">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+            </div>
+
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">CSS3</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+              <h3 class="card-title">Portfolio</h3>
+              <p class="card-desc">
+                Clean, personal developer portfolio showcasing custom organic branding, responsive multi-breakpoint layouts, and interactive modules.
+              </p>
+              <div class="card-actions">
+                <button class="btn btn-outline btn-sm" onclick="openProjectModal('portfolio')">
+                  Explore Highlights
+                </button>
+                <a href="#home" class="btn btn-primary btn-sm">
+                  Active Site
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Resume Builder -->
+          <article class="project-card card-resume">
+            <div class="card-screen-wrap">
+              <!-- Laptop Mockup Display -->
+              <div class="laptop-mockup">
+                <div class="laptop-camera"></div>
+                <div class="laptop-screen">
+                  <div class="screen-preview screen-resume">
+                    <!-- Mini simulated UI -->
+                    <div class="mini-header">
+                      <div class="mini-dots"><span></span><span></span><span></span></div>
+                      <div class="mini-title">resumebuilder.app</div>
+                    </div>
+                    <div class="mini-body mini-resume-body">
+                      <div class="mini-sidebar">
+                        <div class="mini-field"></div>
+                        <div class="mini-field"></div>
+                        <div class="mini-field half"></div>
+                        <div class="mini-btn-green"></div>
+                      </div>
+                      <div class="mini-paper">
+                        <div class="paper-header">
+                          <div class="paper-name"></div>
+                          <div class="paper-role"></div>
+                        </div>
+                        <div class="paper-line"></div>
+                        <div class="paper-line full"></div>
+                        <div class="paper-line half"></div>
+                        <div class="paper-grid">
+                          <span></span><span></span><span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+            </div>
+
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">CSS3</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+              <h3 class="card-title">Resume Builder</h3>
+              <p class="card-desc">
+                Interactive CV generator with dynamic live preview, section re-ordering, skill proficiency tags, and print-ready export styling.
+              </p>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('resume')">
+                  Launch Interactive Demo
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Text Converter -->
+          <article class="project-card card-converter">
+            <div class="card-screen-wrap">
+              <!-- Laptop Mockup Display -->
+              <div class="laptop-mockup">
+                <div class="laptop-camera"></div>
+                <div class="laptop-screen">
+                  <div class="screen-preview screen-converter">
+                    <!-- Mini simulated UI -->
+                    <div class="mini-header">
+                      <div class="mini-dots"><span></span><span></span><span></span></div>
+                      <div class="mini-title">textconverter.io</div>
+                    </div>
+                    <div class="mini-body mini-converter-body">
+                      <div class="converter-box">
+                        <div class="converter-text-sim">HELLO WORLD &rarr; hello world</div>
+                        <div class="converter-btns-sim">
+                          <span class="sim-btn">UPPER</span>
+                          <span class="sim-btn">lower</span>
+                          <span class="sim-btn">Title</span>
+                        </div>
+                        <div class="converter-stats-sim">
+                          <span>Words: 14</span>
+                          <span>Chars: 82</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+            </div>
+
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">CSS3</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+              <h3 class="card-title">Text Converter</h3>
+              <p class="card-desc">
+                Lightweight, real-time text manipulation tool offering instant case conversions, white-space cleaning, word & character counts, and one-tap copy.
+              </p>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('converter')">
+                  Try Tool Live Now ⚡
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Tech Skills Pills Bar (Like bottom pills in reference) -->
+        <div class="skills-center-bar">
+          <span class="skills-label">Core Stack:</span>
+          <div class="pills-group">
+            <span class="tech-pill pill-html">HTML5</span>
+            <span class="tech-pill pill-css">CSS3</span>
+            <span class="tech-pill pill-js">JavaScript</span>
+            <span class="tech-pill pill-responsive">Responsive Design</span>
+            <span class="tech-pill pill-ui">UI / UX</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION & GMAIL TOGGLE ==================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        
+        <div class="contact-wrapper">
+          
+          <!-- Contact Left: Student Info & Quick Details -->
+          <div class="contact-info-panel">
+            <div class="badge-pill">
+              <span class="badge-dot"></span>
+              <span class="badge-text">Get in Touch</span>
+            </div>
+
+            <h2 class="contact-title">Let's talk and build something great.</h2>
+            <p class="contact-desc">
+              Whether you have an internship opportunity, a project idea, or simply want to connect with a passionate 2nd-year KGCAS student, feel free to reach out anytime!
+            </p>
+
+            <div class="info-items">
+              <div class="info-card">
+                <div class="info-icon">🎓</div>
+                <div class="info-detail">
+                  <span class="info-label">College & Year</span>
+                  <span class="info-value">KG College of Arts and Science (KGCAS) · 2nd Year</span>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div class="info-detail">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Coimbatore, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">✉️</div>
+                <div class="info-detail">
+                  <span class="info-label">Primary Email</span>
+                  <span class="info-value user-select-all">jackvin151702@gmail.com</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Copy Email Button -->
+            <div class="quick-copy-bar">
+              <span class="email-display">jackvin151702@gmail.com</span>
+              <button id="copyEmailBtn" class="btn btn-secondary btn-sm" title="Copy email address">
+                <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copyBtnText">Copy Email</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact Right: Interactive Gmail Toggle Card -->
+          <div class="contact-gmail-panel">
+            <div class="gmail-card">
+              
+              <div class="gmail-card-header">
+                <div class="gmail-branding">
+                  <div class="gmail-icon-wrapper">
+                    <!-- Gmail M Icon -->
+                    <svg viewBox="0 0 24 24" class="gmail-svg">
+                      <path fill="#4285F4" d="M22 6.5l-10 7.5L2 6.5V18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6.5z"/>
+                      <path fill="#34A853" d="M2 6.5l10 7.5 10-7.5V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v.5z"/>
+                      <path fill="#EA4335" d="M12 14L2 6.5V5l10 7.5L22 5v1.5L12 14z"/>
+                      <path fill="#FBBC05" d="M2 5v1.5l10 7.5 10-7.5V5H2z" opacity="0.1"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="gmail-card-title">Gmail Quick Connect</h3>
+                    <p class="gmail-card-target">jackvin151702@gmail.com</p>
+                  </div>
+                </div>
+
+                <!-- Mode Switcher Toggle: Quick Link vs Custom Compose -->
+                <div class="gmail-mode-toggle" role="tablist">
+                  <button id="toggleDirectMode" class="mode-btn active" role="tab" aria-selected="true">Direct</button>
+                  <button id="toggleComposeMode" class="mode-btn" role="tab" aria-selected="false">Compose</button>
+                </div>
+              </div>
+
+              <!-- View 1: Direct Mode -->
+              <div id="gmailDirectView" class="gmail-view-content active">
+                <div class="direct-callout">
+                  <p>Choose your preferred way to send an email to <strong>Jackvin</strong>:</p>
+                </div>
+
+                <div class="direct-buttons-grid">
+                  <!-- Open in Gmail Web App -->
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jackvin151702@gmail.com&su=Hello%20Jackvin!&body=Hi%20Jackvin,%20I%20saw%20your%20portfolio..." 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="gmail-action-card primary-action">
+                    <div class="action-icon">🌐</div>
+                    <div class="action-meta">
+                      <strong>Open in Gmail (Web)</strong>
+                      <span>Direct compose tab in your browser</span>
+                    </div>
+                    <span class="action-arrow">&rarr;</span>
+                  </a>
+
+                  <!-- Default System Mail Client (mailto) -->
+                  <a href="mailto:jackvin151702@gmail.com?subject=Hello%20Jackvin&body=Hi%20Jackvin," 
+                     class="gmail-action-card">
+                    <div class="action-icon">💻</div>
+                    <div class="action-meta">
+                      <strong>Open Default Mail App</strong>
+                      <span>Outlook, Apple Mail, or Thunderbird</span>
+                    </div>
+                    <span class="action-arrow">&rarr;</span>
+                  </a>
+                </div>
+
+                <div class="gmail-tips">
+                  <span>💡 Tip: Clicking "Open in Gmail" opens a ready-to-send draft directly in your logged-in Google account.</span>
+                </div>
+              </div>
+
+              <!-- View 2: Quick Composer Mode -->
+              <div id="gmailComposeView" class="gmail-view-content">
+                <form id="gmailComposeForm" class="quick-compose-form">
+                  <div class="form-group">
+                    <label for="senderName">Your Name</label>
+                    <input type="text" id="senderName" placeholder="e.g. Alex Morgan" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="emailSubject">Subject</label>
+                    <input type="text" id="emailSubject" placeholder="e.g. Project Inquiry / Collaboration" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="emailMessage">Message</label>
+                    <textarea id="emailMessage" rows="3" placeholder="Write a short message to Jackvin..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-block">
+                    <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                    <span>Launch Draft in Gmail</span>
+                  </button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-logo">Jackvin Paul J A</a>
+        <p class="footer-text">
+          Second Year Student at KG College of Arts and Science (KGCAS) · Coimbatore, India
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:jackvin151702@gmail.com">jackvin151702@gmail.com</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Jackvin Paul J A. Built with HTML5 + CSS3 + Vanilla JavaScript.</p>
+        <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS FOR INTERACTIVE PROJECTS ==================== -->
+  <!-- 1. Text Converter Interactive Modal -->
+  <div class="modal-backdrop" id="converterModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge">Interactive Project</span>
+          <h3 class="modal-title">Text Converter Tool</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('converterModal')" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-instruction">Try the tool live! Type or paste any text below, then test the transformation buttons:</p>
+        
+        <div class="converter-app">
+          <div class="converter-toolbar">
+            <button class="tool-btn" onclick="convertText('upper')">UPPERCASE</button>
+            <button class="tool-btn" onclick="convertText('lower')">lowercase</button>
+            <button class="tool-btn" onclick="convertText('title')">Title Case</button>
+            <button class="tool-btn" onclick="convertText('sentence')">Sentence case</button>
+            <button class="tool-btn" onclick="convertText('slug')">slug-case</button>
+            <button class="tool-btn tool-btn-danger" onclick="clearConverterText()">Clear</button>
+          </div>
+
+          <textarea id="converterInput" class="converter-textarea" placeholder="Type or paste your text here to test the live converter... (e.g. hello from Jackvin at KGCAS)">Jackvin Paul J A is a 2nd year student at KGCAS Coimbatore building responsive web projects with HTML, CSS, and JavaScript!</textarea>
+
+          <div class="converter-footer">
+            <div class="counter-metrics">
+              <span class="metric">Words: <strong id="metricWords">0</strong></span>
+              <span class="metric">Characters: <strong id="metricChars">0</strong></span>
+              <span class="metric">Reading Time: <strong id="metricReading">0s</strong></span>
+            </div>
+
+            <button class="btn btn-primary btn-sm" onclick="copyConverterOutput()">
+              📋 Copy Result
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Resume Builder Interactive Modal -->
+  <div class="modal-backdrop" id="resumeModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge">Interactive Project</span>
+          <h3 class="modal-title">Resume Builder Demo</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('resumeModal')" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-demo-grid">
+          <!-- Editor inputs on left -->
+          <div class="resume-controls">
+            <h4>Live Resume Fields</h4>
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="resName" value="Jackvin Paul J A" oninput="updateResumePreview()">
+            </div>
+            <div class="form-group">
+              <label>Role / Title</label>
+              <input type="text" id="resRole" value="Web Developer & Student" oninput="updateResumePreview()">
+            </div>
+            <div class="form-group">
+              <label>College / Education</label>
+              <input type="text" id="resEdu" value="KGCAS, Coimbatore - 2nd Year" oninput="updateResumePreview()">
+            </div>
+            <div class="form-group">
+              <label>Key Skills (comma separated)</label>
+              <input type="text" id="resSkills" value="HTML5, CSS3, JavaScript, UI Design, Responsive Web" oninput="updateResumePreview()">
+            </div>
+            <div class="form-group">
+              <label>Summary</label>
+              <textarea id="resSummary" rows="3" oninput="updateResumePreview()">Dedicated student developer passionate about crafting functional, aesthetically pleasing digital products.</textarea>
+            </div>
+          </div>
+
+          <!-- Live Resume Paper Preview on right -->
+          <div class="resume-sheet">
+            <div class="resume-sheet-header">
+              <h2 id="prevName">Jackvin Paul J A</h2>
+              <span id="prevRole" class="prev-role">Web Developer & Student</span>
+              <div id="prevEdu" class="prev-edu">🎓 KGCAS, Coimbatore - 2nd Year</div>
+            </div>
+
+            <div class="resume-section-divider"></div>
+
+            <div class="resume-sheet-section">
+              <h5>Professional Summary</h5>
+              <p id="prevSummary">Dedicated student developer passionate about crafting functional, aesthetically pleasing digital products.</p>
+            </div>
+
+            <div class="resume-sheet-section">
+              <h5>Core Competencies</h5>
+              <div id="prevSkills" class="resume-skills-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>UI Design</span>
+              </div>
+            </div>
+
+            <div class="resume-sheet-section">
+              <h5>Key Projects</h5>
+              <ul class="resume-proj-list">
+                <li><strong>Portfolio Website:</strong> Modern responsive showcase with custom theme engine.</li>
+                <li><strong>Text Converter:</strong> Browser utility for case transformations and metrics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button class="btn btn-secondary btn-sm" onclick="printResumePreview()">
+            🖨️ Print / Save as PDF
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="closeModal('resumeModal')">
+            Close Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Portfolio Project Details Modal -->
+  <div class="modal-backdrop" id="portfolioModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge">Architecture & Design</span>
+          <h3 class="modal-title">Jackvin's Portfolio Architecture</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal('portfolioModal')" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="portfolio-details-content">
+          <div class="detail-item">
+            <strong>🎯 Objective:</strong>
+            <p>Design a friendly, editorial portfolio aligned with the aesthetic reference, tailored specifically for Jackvin Paul J A with unique color moods, responsive layouts, and interactive utilities.</p>
+          </div>
+          <div class="detail-item">
+            <strong>🎨 Design System:</strong>
+            <p>Features 4 selectable color palettes (Sunset Coral, Electric Indigo, Nordic Sage, Midnight Dark), organic blob masks, subtle floating badge cards, and laptop device mockups.</p>
+          </div>
+          <div class="detail-item">
+            <strong>⚡ Stack & Tech:</strong>
+            <p>Strictly 100% vanilla HTML5, CSS3 Custom Properties, and JavaScript without external library dependencies for blistering fast loading speeds and zero bloat.</p>
+          </div>
+        </div>
+        <div class="modal-footer-actions">
+          <button class="btn btn-primary btn-sm" onclick="closeModal('portfolioModal')">
+            Awesome!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
